@@ -1,0 +1,302 @@
+@import url("reset.css");
+@font-face { font-family: 'GmarketSansBold'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') 
+  format('woff'); font-weight: normal; font-style: normal; }
+
+html { scroll-behavior: smooth;}
+
+body {background: #000; 
+  margin: 0;  
+  padding: 0; 
+  box-sizing: border-box; 
+  align-items: center;
+  min-height:100vh;
+  font-family: 'GmarketSansBold', sans-serif;
+}
+
+.material-icons{color: #fff; margin:0; padding:0; position: absolute; left:20px}
+
+/* header */
+.menu { position: fixed; z-index: 10; left: 30px; top: 0px; background:#000;
+  width:100%; padding:20px 0;
+}
+.menu li { display: inline; list-style: none; margin: 0 10px;
+}
+.menu li a { color: white; text-decoration: none; transition: all 0.3s ease;
+}
+.menu li a:hover{color: #51e6a6}
+.menu li a.active { box-shadow: 0px 5px #000, 0px 7px white; transition: all 0.3s ease;
+}
+
+/* section 기본설정 */
+section { background: #000; min-height: 100vh; width: 100%; display: grid; position: relative; 
+  margin: 0; padding: 0; transition: all 0.5s ease;
+}
+
+section .wrapper { display: grid; max-width: 1180px; margin: auto; opacity: 1; 
+  position: relative; transition: all 1s ease-out; 
+} 
+
+/* section 이미지들 */
+section .intro_image1{height:70px; vertical-align: top;}
+section .intro_image2{height:80px; vertical-align: top;}
+.about_image{height:50px; vertical-align: top;}
+
+/* About */
+
+.section-2 .wrapper{ padding:0 30px}
+.section-2 .wrapper .grid-box{display:grid; grid-template-columns: repeat(2,1fr);
+}
+.line-change{visibility: hidden; display: none;}
+.material-icons{color: #fff; margin:0; padding:0; position: absolute; left:-6%}
+.item{padding:20px 0;
+}
+
+.item:nth-child(1){grid-column:1/3;
+}
+
+.item:last-child{grid-column:1/3; display: flex;
+}
+
+.text-2{text-align: center;}
+.textBox { margin: 0 auto; word-break: break-word;
+}
+.textBox h1, .wrapper h1 { color: white; font-size: 4.5rem;
+}
+.textBox h2 { color: white; font-size: 3rem; 
+}
+.textBox p, .wrapper p { color: #fff; font-size: 1.4rem; line-height: 2.4rem;
+}
+
+
+
+/* skills */
+.section-3{
+  margin-top: 400px; padding-top:100px
+}
+.section-3 h1 {margin-bottom:30px; text-align: center;}
+.section-3 p {color: #51e6a6; text-align: center; margin-bottom: 16px;}
+
+.section-3 .wrapper .grid-box{
+  position: relative;
+  min-width: 100%;
+  display:grid; 
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: minmax(100px, auto);
+}
+
+.skill_item {
+  width:150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:20px;
+  position: relative;
+  transition:0.5s
+}
+
+.skill_image{
+  height: 9rem;
+}
+.skill_image2{
+  width: 9rem;
+}
+
+
+/* contact */
+
+.section-4 h1{
+  text-align: center;
+}
+.contact-form-wrapper {
+  z-index: 9;
+  width:100%;
+}
+
+.contact-form {
+  padding-bottom: 1em;
+  margin-top:20px
+}
+
+
+.contact-form-el {
+	position: relative;
+}
+
+.contact-form-el > .input {
+	display: block;
+  width: 100%;
+	margin-bottom: 1.3em;
+  border-bottom: 2px solid;
+  padding:10px;
+  background: #000;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 30px;
+  color: #fff
+}
+
+.contact-form-el > textarea {
+	resize: both;
+	min-width: 100%;
+	min-height: 10em;
+	height: 10em;
+  background: #000;
+  border:none;
+  color: #fff
+}
+
+.contact-form-el > label {
+	font-size: 1rem;
+	position: absolute;
+	top: .3em; left: 0;
+  font-weight: 300;
+	text-transform: uppercase;
+	color: #fff;
+	pointer-events: none;
+	transition: all 300ms linear;
+}
+
+.contact-form-el > .input:focus + label,
+.contact-form-el > .input:valid + label {
+	transform: translateY(-1.7em);
+	transform-origin: bottom left;
+}
+.contact-form-el > .input:focus + label,
+.contact-form-el > .input:focus:valid + label {
+	color: #51e6a6;
+}
+.contact-form-el > .input:valid + label {
+	color: #fff;
+}
+
+
+.global-button::before {
+	content:"";
+	height: 1em;
+	width: 1em;
+	display: inline-block;
+	position: relative;
+	top: .2em; bottom: 0;
+  background: url('https://eevu.github.io/img/arrow.svg') no-repeat;
+  color: #fff;
+	background-position: center;
+	background-size: cover;
+	
+}
+
+.contact-form .global-button{
+  font-size:1.7rem;
+  text-transform:uppercase;
+  color: #fff;
+  background:none;
+  border:none;
+}
+
+
+.contact-form .global-button:hover::before {
+	animation: move_arrow_h 1500ms ease-in infinite forwards;
+}
+
+@keyframes move_arrow_h {
+	0% {
+		transform: translateX(0px);
+	}
+	15% {
+		transform: translateX(-6px);
+	}
+	30% {
+		transform: translateX(0px);
+	}
+	45% {
+		transform: translateX(-6px);
+	}
+	60% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+
+/* footer */
+footer{width:100%; height: 6vh; background-color: rgb(20, 20, 20);}
+.footer-wrapper{padding:13px 30px 0}
+.social{display:inline-block;margin-left: 10px; float:right;}
+.social-icon{width:30px; opacity: 0.6;}
+.social-icon:hover{opacity: 1;}
+
+.copyright{display: inline-block; font-family: sans-serif; color:rgb(83, 83, 83); margin-top: 6px; font-size: 12px;}
+
+/* 스크롤바 설정 */
+body::-webkit-scrollbar { width: 1em;
+}
+
+body::-webkit-scrollbar-track { background: #0d0d0d;
+}
+
+body::-webkit-scrollbar-thumb { background-color: #1a1a1a;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    left: 0px;
+  }
+.line-change{display:block; visibility: visible;}
+  .textBox h1 {
+    font-size: 3.5em;
+  }
+  section .intro_image1{height:54px; vertical-align: top;}
+section .intro_image2{height:68px; vertical-align: top;}
+
+
+  section .wrapper {
+    width: 90%;
+    padding: 0 5%;
+  }
+  section .wrapper .line {
+    left: 5%;
+  }
+
+  .item.item:nth-child(2){
+    grid-column: 1/3;
+  }
+  .item.item:nth-child(3){
+    grid-column: 1/3;
+  }
+.section-3 .wrapper .grid-box{
+  grid-template-columns: repeat(3,1fr);
+}
+.material-icons{visibility: hidden;}
+  
+}
+@media screen and (max-width: 760px) {
+  .textBox h1 {
+    font-size: 3.5em;
+  }
+  section .wrapper {
+    width: 90%;
+    padding: 0 5%;
+  }
+  section .wrapper .line {
+    left: 5%;
+  }
+  
+footer > #credit {
+	font-size: 0.8em;
+	margin-top: 4em;
+	text-align: center;
+}
+
+.credit-link, .credit-link:hover {
+	text-decoration: underline !important;
+}
+
+.credit-link:hover {
+  color: #51e6a6;
+} 
+
+
+}
